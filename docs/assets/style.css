@@ -139,7 +139,48 @@
   .title h1 {
     margin: 0;
   }
+
+  input {
+    display: none;
+  }
+
+  label {
+    display: block;
+    position: relative;
+    height: 30px;
+    font-size: 21px;
+    cursor: pointer;
+    line-height: 21px;
+    font-weight: 600;
+  }
   
+  label+article {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.3s ease-in-out;
+    -moz-transition: max-heightt 0.3s ease-in-out;
+    -o-transition: max-height 0.3s ease-in-out;
+    -ms-transition: max-height 0.3s ease-in-out;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  input + label:before {
+    content: "+ "
+  }
+
+  input:checked + label:before {
+    content: "- "
+  }
+
+  input:checked ~ article {
+    max-height: 1800px;
+    -webkit-transition: max-height 0.8s ease-in-out;
+    -moz-transition: max-height 0.8s ease-in-out;
+    -o-transition: max-height 0.8s ease-in-out;
+    -ms-transition: max-height 0.8s ease-in-out;
+    transition: max-height 0.8s ease-in-out;
+  }
+
   .content {
     margin-top: 1rem;
     padding: 2rem;
