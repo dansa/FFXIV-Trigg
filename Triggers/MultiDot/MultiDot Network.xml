@@ -1,0 +1,1090 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="89c4a85c-f6dd-4f8e-b31d-37396a870fd3" Name="MutliDHot Network" Enabled="true">
+    <Folders>
+      <Folder Id="3e947f9a-83eb-4fab-aeb6-319968e2cf68" Name="MultiDot" Enabled="true">
+        <Folders>
+          <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="100663296" Id="85108862-513d-4f52-9f28-22a6d123976f" Name="Summoner" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="- Apply Dot" Id="2dd51809-868a-4d01-afec-dfb7edb60e3c" RegularExpression="^26\|[^\|]+\|(?&lt;skill&gt;b3|bd|4be|b4|4bf)\|[^\|]+\|(?&lt;dur&gt;\d{1,3})\.\d{2}\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^\|]{1,50})" DebugLevel="Verbose">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9d52ef79-929c-47cf-b632-d8e5f4227cb3" TriggerText="func${eid},${ename},${skill},${dur}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Drop Dot" Id="3879ef1e-cf9c-42b6-927e-4c0cad67da4a" RegularExpression="^30\|[^\|]+\|(?&lt;skill&gt;b3|bd|4be|b4|4bf)\|[^\|]+\|0\.00\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="fe9d774f-cc1c-41b8-aa43-c2ee8a5d81bc" TriggerText="func${eid},${skill}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="JobDots" Id="bbeec17f-c2f1-4b9c-b0c2-0f2afb2bc3e4" RegularExpression="" DebugLevel="Info">
+                <Actions>
+                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="b3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="26" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                        <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="SMN" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      </ConditionGroup>
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="ACN" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="26" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                      </ConditionGroup>
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="bd" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="26" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                        <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="ACN" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      </ConditionGroup>
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="SMN" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="26" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="66" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                      </ConditionGroup>
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="4be" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="66" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="SMN" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="b4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="ACN" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      </ConditionGroup>
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="SMN" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="66" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                      </ConditionGroup>
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="5" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="4bf" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="66" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="SMN" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="8589934592" Id="b57b6f4c-f6f2-42dd-9be1-19b8b75bb234" Name="Samurai" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="JobDots" Id="074186a8-1937-451d-81c2-b2c5a176adae" RegularExpression="" DebugLevel="Info">
+                <Actions>
+                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="4cc" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="SAM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Drop Dot" Id="24393b55-cad7-4ecf-a269-abf76a5210a5" RegularExpression="^30\|[^\|]+\|(?&lt;skill&gt;4cc)\|[^\|]+\|0\.00\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="fe9d774f-cc1c-41b8-aa43-c2ee8a5d81bc" TriggerText="func${eid},${skill}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="- Apply Dot" Id="ecc42f4a-bdf5-4b7f-9f79-6d9dc03898ae" RegularExpression="^26\|[^\|]+\|(?&lt;skill&gt;4cc)\|[^\|]+\|(?&lt;dur&gt;\d{1,3})\.\d{2}\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^\|]{1,50})" DebugLevel="Verbose">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9d52ef79-929c-47cf-b632-d8e5f4227cb3" TriggerText="func${eid},${ename},${skill},${dur}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="134217728" Id="7dd2e596-ece2-4cfa-a303-a1149192dcf6" Name="Scholar" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="JobDots" Id="8c1e45f5-8863-4687-8ca1-19e291d2ce40" RegularExpression="" DebugLevel="Info">
+                <Actions>
+                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="b3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="26" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="SCH" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="bd" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="26" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="72" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="SCH" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="767" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="SCH" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="72" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="- Apply Dot" Id="aab0d247-78be-4aa9-8ed5-8ce5045c5938" RegularExpression="^26\|[^\|]+\|(?&lt;skill&gt;b3|bd|767)\|[^\|]+\|(?&lt;dur&gt;\d{1,3})\.\d{2}\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^\|]{1,50})" DebugLevel="Verbose">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9d52ef79-929c-47cf-b632-d8e5f4227cb3" TriggerText="func${eid},${ename},${skill},${dur}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Drop Dot" Id="b478de24-26f5-4776-b8d2-b4fcd84e6413" RegularExpression="^30\|[^\|]+\|(?&lt;skill&gt;b3|bd|767)\|[^\|]+\|0\.00\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="fe9d774f-cc1c-41b8-aa43-c2ee8a5d81bc" TriggerText="func${eid},${skill}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="4194320" Id="6d5a5cb2-31a5-4ba0-b3f0-435ef0d0818c" Name="Bard" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="JobDots" Id="dc5ddd8e-fe12-4c1f-b906-493921506775" RegularExpression="" DebugLevel="Info">
+                <Actions>
+                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="7c" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="ARC" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      </ConditionGroup>
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="BRD" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="64" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                      </ConditionGroup>
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="4b0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="64" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="BRD" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="81" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="ARC" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      </ConditionGroup>
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="BRD" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="64" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                      </ConditionGroup>
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="4b1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="64" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="BRD" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Drop Dot" Id="3a4268a9-ad85-47f2-8a60-2f267c5e6cb4" RegularExpression="^30\|[^\|]+\|(?&lt;skill&gt;4b0|4b1|7c|81)\|[^\|]+\|0\.00\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="fe9d774f-cc1c-41b8-aa43-c2ee8a5d81bc" TriggerText="func${eid},${skill}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="- Apply Dot" Id="ce3dd2a1-d366-45eb-af5e-8258cde93cd2" RegularExpression="^26\|[^\|]+\|(?&lt;skill&gt;4b0|4b1|7c|81)\|[^\|]+\|(?&lt;dur&gt;\d{1,3})\.\d{2}\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^\|]{1,50})" DebugLevel="Verbose">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9d52ef79-929c-47cf-b632-d8e5f4227cb3" TriggerText="func${eid},${ename},${skill},${dur}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="4294967296" Id="a6b7b100-da17-4e21-a9db-c4f1bf403a1b" Name="Astrologian" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="JobDots" Id="6ae4cfbc-be92-4511-bcfc-21675745e0a7" RegularExpression="" DebugLevel="Info">
+                <Actions>
+                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="346" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="AST" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="46" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="34b" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="AST" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="46" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="72" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="759" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="AST" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="72" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Drop Dot" Id="8570ff9d-1984-41fa-9084-788d9e32de94" RegularExpression="^30\|[^\|]+\|(?&lt;skill&gt;346|34b|759)\|[^\|]+\|0\.00\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="fe9d774f-cc1c-41b8-aa43-c2ee8a5d81bc" TriggerText="func${eid},${skill}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="- Apply Dot" Id="4c041487-8f60-4a5f-9a5e-abc96db5885e" RegularExpression="^26\|[^\|]+\|(?&lt;skill&gt;346|34b|759)\|[^\|]+\|(?&lt;dur&gt;\d{1,3})\.\d{2}\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^\|]{1,50})" DebugLevel="Verbose">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9d52ef79-929c-47cf-b632-d8e5f4227cb3" TriggerText="func${eid},${ename},${skill},${dur}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="2097160" Id="9f316de8-8979-43d1-8b3c-5d46f74d97ac" Name="Dragoon" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="JobDots" Id="5ed2e900-72f1-4a53-8c1e-e66c1a4ddd03" RegularExpression="" DebugLevel="Info">
+                <Actions>
+                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="76" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="DRG" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="LNC" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Drop Dot" Id="a42670e0-7694-46b0-a6b6-22eb9161ed6b" RegularExpression="^30\|[^\|]+\|(?&lt;skill&gt;76)\|[^\|]+\|0\.00\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="fe9d774f-cc1c-41b8-aa43-c2ee8a5d81bc" TriggerText="func${eid},${skill}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="- Apply Dot" Id="094ec3b2-aefd-4b32-8e1a-f454ffa4bde2" RegularExpression="^26\|[^\|]+\|(?&lt;skill&gt;76)\|[^\|]+\|(?&lt;dur&gt;\d{1,3})\.\d{2}\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^\|]{1,50})" DebugLevel="Verbose">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9d52ef79-929c-47cf-b632-d8e5f4227cb3" TriggerText="func${eid},${ename},${skill},${dur}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="1073741824" Id="c0d58b8a-0ab1-46a9-beae-2dbe8d8bae52" Name="Machinist" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="JobDots" Id="482a5741-8a24-4b4d-a02b-7ca5ffad5746" RegularExpression="" DebugLevel="Info">
+                <Actions>
+                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="74a" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="MCH" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Drop Dot" Id="d3257e0b-6850-401a-898a-4a338507f9ac" RegularExpression="^30\|[^\|]+\|(?&lt;skill&gt;74a)\|[^\|]+\|0\.00\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="fe9d774f-cc1c-41b8-aa43-c2ee8a5d81bc" TriggerText="func${eid},${skill}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="- Apply Dot" Id="fb90c6bc-695a-4bc9-85f2-539d1873c7bf" RegularExpression="^26\|[^\|]+\|(?&lt;skill&gt;74a)\|[^\|]+\|(?&lt;dur&gt;\d{1,3})\.\d{2}\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^\|]{1,50})" DebugLevel="Verbose">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9d52ef79-929c-47cf-b632-d8e5f4227cb3" TriggerText="func${eid},${ename},${skill},${dur}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="524290" Id="b5a4fa40-12b4-4bfe-a245-2bb9b3814894" Name="Monk" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="JobDots" Id="dfc6855c-5bcc-4078-b520-51f8c77b8035" RegularExpression="" DebugLevel="Info">
+                <Actions>
+                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="f6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="MNK" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="PUG" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Drop Dot" Id="543b5c3b-607e-4249-92dc-a0c71f287c63" RegularExpression="^30\|[^\|]+\|(?&lt;skill&gt;f6)\|[^\|]+\|0\.00\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="fe9d774f-cc1c-41b8-aa43-c2ee8a5d81bc" TriggerText="func${eid},${skill}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="- Apply Dot" Id="4cf43fe4-26b1-4763-9466-1174054c5ada" RegularExpression="^26\|[^\|]+\|(?&lt;skill&gt;f6)\|[^\|]+\|(?&lt;dur&gt;\d{1,3})\.\d{2}\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^\|]{1,50})" DebugLevel="Verbose">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9d52ef79-929c-47cf-b632-d8e5f4227cb3" TriggerText="func${eid},${ename},${skill},${dur}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="262144" Id="68ca1e81-9859-4f05-9a31-752e5c8f913f" Name="Paladin" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="JobDots" Id="1909bc9a-b97d-4b1b-ba8b-887ca34cc14e" RegularExpression="" DebugLevel="Info">
+                <Actions>
+                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="2d5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="PLD" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Drop Dot" Id="ea7939d3-99cf-4648-b8b4-519d912158ca" RegularExpression="^30\|[^\|]+\|(?&lt;skill&gt;2d5)\|[^\|]+\|0\.00\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="fe9d774f-cc1c-41b8-aa43-c2ee8a5d81bc" TriggerText="func${eid},${skill}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="- Apply Dot" Id="4e77e474-5ada-4d79-82fc-045b5721a38f" RegularExpression="^26\|[^\|]+\|(?&lt;skill&gt;2d5)\|[^\|]+\|(?&lt;dur&gt;\d{1,3})\.\d{2}\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^\|]{1,50})" DebugLevel="Verbose">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9d52ef79-929c-47cf-b632-d8e5f4227cb3" TriggerText="func${eid},${ename},${skill},${dur}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="8388640" Id="b936b121-e400-4813-a074-c00fdd13bd53" Name="White Mage" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="- Apply Dot" Id="4a64998c-bcb7-449c-a220-db438a66e235" RegularExpression="^26\|[^\|]+\|(?&lt;skill&gt;8f|90|74f)\|[^\|]+\|(?&lt;dur&gt;\d{1,3})\.\d{2}\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^\|]{1,50})">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9d52ef79-929c-47cf-b632-d8e5f4227cb3" TriggerText="func${eid},${ename},${skill},${dur}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Drop Dot" Id="3bc302ba-06f0-4bba-bd56-9668b3a82733" RegularExpression="^30\|[^\|]+\|(?&lt;skill&gt;8f|90|74f)\|[^\|]+\|0\.00\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="fe9d774f-cc1c-41b8-aa43-c2ee8a5d81bc" TriggerText="func${eid},${skill}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="JobDots" Id="2664ecc5-34c9-46e1-995c-0267771ed2ae" RegularExpression="" DebugLevel="Info">
+                <Actions>
+                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="8f" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="46" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                        <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="CNJ" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      </ConditionGroup>
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="WHM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="46" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                      </ConditionGroup>
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="90" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="46" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                        <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="CNJ" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      </ConditionGroup>
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="WHM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="46" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="72" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                      </ConditionGroup>
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="74f" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="WHM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="72" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="16777280" Id="50bb1356-e1ca-4134-9def-b46d8089332c" Name="Black Mage" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="JobDots" Id="8b8a5698-1486-406c-8e72-95ad8e8b9193" RegularExpression="" DebugLevel="Info">
+                <Actions>
+                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="a1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="THM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      </ConditionGroup>
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="BLM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="45" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                      </ConditionGroup>
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="a3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="45" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="BLM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="a2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="THM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      </ConditionGroup>
+                      <ConditionGroup Enabled="true" Grouping="And">
+                        <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="BLM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="64" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                      </ConditionGroup>
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="dJobDots" ListVariableExpression="4ba" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].level}" ExpressionTypeL="Numeric" ExpressionR="64" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="BLM" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Drop Dot" Id="24e68d28-b3ff-4563-a7fa-d7c7bb934c65" RegularExpression="^30\|[^\|]+\|(?&lt;skill&gt;a1|a2|a3|4ba)\|[^\|]+\|0\.00\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="fe9d774f-cc1c-41b8-aa43-c2ee8a5d81bc" TriggerText="func${eid},${skill}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="- Apply Dot" Id="e28f1a3c-9075-4452-847e-25638c18e32e" RegularExpression="^26\|[^\|]+\|(?&lt;skill&gt;a1|a2|a3|4ba)\|[^\|]+\|(?&lt;dur&gt;\d{1,3})\.\d{2}\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^\|]{1,50})" DebugLevel="Verbose">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9d52ef79-929c-47cf-b632-d8e5f4227cb3" TriggerText="func${eid},${ename},${skill},${dur}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers>
+          <Trigger Enabled="true" Source="None" Sequential="True" Name="VisualizeDots" Id="9d52ef79-929c-47cf-b632-d8e5f4227cb3" RegularExpression="^func(?&lt;eid&gt;[A-F0-9]{8}),(?&lt;ename&gt;[\S ]{1,50}),(?&lt;skill&gt;[a-f0-9]{1,5}),(?&lt;dur&gt;\d{1,3})" DebugLevel="Info">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="d${eid}${skill}dur" VariableExpression="${_systemtimems}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" AuraName="${eid}${skill}ic" AuraImage="https://raw.githubusercontent.com/dansa/FFXIV-Trigg/master/Resources/status/${var:dDColor}/${skill}.png" AuraXIniExpression="${var:dDX}" AuraYIniExpression="${var:dDY}" AuraWIniExpression="34" AuraHIniExpression="34" AuraOIniExpression="100" AuraYTickExpression="${var:dDY}+${lvar:dDots.indexof(${eid}${skill})}*${var:dDPadding}" AuraTTLTickExpression="${var:d${eid}${skill}dur}-${_systemtimems}+(${dur}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Info">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dDots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" AuraName="${eid}${skill}bo" AuraImage="https://raw.githubusercontent.com/dansa/FFXIV-Trigg/master/Resources/pixBarOut${var:dDColor}.png" AuraXIniExpression="${var:dDX}+32" AuraYIniExpression="${var:dDY}+15" AuraWIniExpression="122" AuraHIniExpression="21" AuraOIniExpression="100" AuraYTickExpression="(${var:dDY}+15)+${lvar:dDots.indexof(${eid}${skill})}*${var:dDPadding}" AuraTTLTickExpression="${var:d${eid}${skill}dur}-${_systemtimems}+(${dur}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Warning">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dDots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" AuraName="${eid}${skill}bi" AuraImage="https://raw.githubusercontent.com/dansa/FFXIV-Trigg/master/Resources/pixBarIn.png" AuraXIniExpression="${var:dDX}+32" AuraYIniExpression="${var:dDY}+15" AuraWIniExpression="122" AuraHIniExpression="21" AuraOIniExpression="100" AuraYTickExpression="(${var:dDY}+15)+${lvar:dDots.indexof(${eid}${skill})}*${var:dDPadding}" AuraWTickExpression="122*(((${dur}*1000)+${var:d${eid}${skill}dur}-${_systemtimems})/(${dur}*1000))" AuraTTLTickExpression="${var:d${eid}${skill}dur}-${_systemtimems}+(${dur}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Warning">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dDots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" TextAuraAlignment="TopLeft" TextAuraFontSize="9.75" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename}" TextAuraXIniExpression="${var:dDX}+34" TextAuraYIniExpression="${var:dDY}+5" TextAuraWIniExpression="400" TextAuraHIniExpression="34" TextAuraOIniExpression="100" TextAuraYTickExpression="(${var:dDY}+5)+${lvar:dDots.indexof(${eid}${skill})}*${var:dDPadding}" TextAuraTTLTickExpression="${var:d${eid}${skill}dur}-${_systemtimems}+(${dur}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" DebugLevel="Warning">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dDots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" TextAuraAlignment="TopLeft" TextAuraFontSize="9.75" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}tc" TextAuraExpression="${numeric:round((${var:d${eid}${skill}dur}-${_systemtimems}+(${dur}*1000))/1000),1)}" TextAuraXIniExpression="${var:dDX}+34+122" TextAuraYIniExpression="${var:dDY}+15" TextAuraWIniExpression="122" TextAuraHIniExpression="34" TextAuraOIniExpression="100" TextAuraYTickExpression="(${var:dDY}+18)+${lvar:dDots.indexof(${eid}${skill})}*${var:dDPadding}" TextAuraTTLTickExpression="${var:d${eid}${skill}dur}-${_systemtimems}+(${dur}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" DebugLevel="Warning">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dDots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="dDots" ListVariableExpression="${eid}${skill}" ListVariableIndex="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dDots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" ListVariableOp="SortAlphaAsc" ListVariableName="dDots" ListVariableExpression="${eid}${skill}" ListVariableIndex="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dDots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Source="None" Name="DotRemoval" Id="fe9d774f-cc1c-41b8-aa43-c2ee8a5d81bc" RegularExpression="^func(?&lt;eid&gt;[A-F0-9]{8}),(?&lt;skill&gt;[a-f0-9]{1,5})">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Remove" ListVariableName="dDots" ListVariableIndex="${lvar:dDots.indexof(${eid}${skill})}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableName="d${eid}${skill}dur" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="${eid}${skill}ta" TextAuraFontName="Microsoft Sans Serif" TriggerId="9d52ef79-929c-47cf-b632-d8e5f4227cb3" TriggerText="${eid},${ename},Stormbite,${dur}" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="${eid}${skill}tc" TextAuraFontName="Microsoft Sans Serif" TriggerId="9d52ef79-929c-47cf-b632-d8e5f4227cb3" TriggerText="${eid},${ename},Stormbite,${dur}" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" AuraOp="DeactivateAura" AuraName="${eid}${skill}bo" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Info">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" AuraOp="DeactivateAura" AuraName="${eid}${skill}bi" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Info">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:dDots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Name="x CombatantRemoval" Id="c030c48d-2034-4f1b-9a8f-0bd5fa7f872f" RegularExpression="\[[\d:\.]{12}\] 04:(?&lt;eid&gt;[A-Fa-f0-9]{8}):Removing combatant [\S ]{1,50}\.  Max HP" DebugLevel="Verbose">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="fe9d774f-cc1c-41b8-aa43-c2ee8a5d81bc" TriggerText="func${eid},${lvar:dJobDots[1]}" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dDots.indexof(${eid}${lvar:dJobDots[1]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="fe9d774f-cc1c-41b8-aa43-c2ee8a5d81bc" TriggerText="func${eid},${lvar:dJobDots[2]}" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dDots.indexof(${eid}${lvar:dJobDots[2]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="63e640fa-c0a0-4814-bc3c-f69f21359061" Name="MultiHot" Enabled="true">
+        <Folders>
+          <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="4294967296" Id="02ce1b49-32f5-4ee1-a9a1-8ba34287a53d" Name="Astrologian" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Drop Hot" Id="1572e87e-e987-4246-9508-ee820183a3b4" RegularExpression="^30\|[^\|]+\|(?&lt;skill&gt;343|344)\|[^\|]+\|0\.00\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="837861f7-3145-4b9d-904e-032dd2c51c5d" TriggerText="func${eid},${skill}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="JobHots" Id="d5e46adb-cb4d-4fc4-89fc-d68a446c5cda" RegularExpression="" DebugLevel="Info">
+                <Actions>
+                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="dJobHots" ListVariableExpression="343" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="dJobHots" ListVariableExpression="344" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="- Apply Hot AOE" Id="94552d4b-4106-4160-873d-74d8243f4433" RegularExpression="^26\|[^\|]+\|(?&lt;skill&gt;344)\|[^\|]+\|(?&lt;dur&gt;\d{1,3})\.\d{2}\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^\|]{1,50})" PeriodRefire="Deny" RefirePeriodExpression="50">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="2c29a9f9-01c7-447c-8f73-587e0ebd47ee" TriggerText="func${eid},${ename},${skill},${dur}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="- Apply Hot ST" Id="f4b340cd-9ec2-457f-846a-1551b0a326f9" RegularExpression="^26\|[^\|]+\|(?&lt;skill&gt;343)\|[^\|]+\|(?&lt;dur&gt;\d{1,3})\.\d{2}\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^\|]{1,50})">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="2c29a9f9-01c7-447c-8f73-587e0ebd47ee" TriggerText="func${eid},${ename},${skill},${dur}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="8388640" Id="25945a58-6d49-427d-a5b4-81bd2e56f07a" Name="White Mage" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="- Apply Hot AOE" Id="b10a3880-2af3-47c4-a770-1b4e26d1a4ea" RegularExpression="^26\|[^\|]+\|(?&lt;skill&gt;96)\|[^\|]+\|(?&lt;dur&gt;\d{1,3})\.\d{2}\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^\|]{1,50})" PeriodRefire="Deny" RefirePeriodExpression="150">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="2c29a9f9-01c7-447c-8f73-587e0ebd47ee" TriggerText="func${eid},${ename},${skill},${dur}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Drop Hot" Id="290adb20-52aa-426f-82c1-59593cda3521" RegularExpression="^30\|[^\|]+\|(?&lt;skill&gt;9e|96)\|[^\|]+\|0\.00\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="837861f7-3145-4b9d-904e-032dd2c51c5d" TriggerText="func${eid},${skill}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="JobHots" Id="9141e495-4840-4872-a4e9-174d2066904a" RegularExpression="" DebugLevel="Info">
+                <Actions>
+                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="dJobHots" ListVariableExpression="9e" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="dJobHots" ListVariableExpression="96" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="- Apply Hot ST" Id="a9cc0e82-666b-494d-a81c-47ce108a1eb6" RegularExpression="^26\|[^\|]+\|(?&lt;skill&gt;9e)\|[^\|]+\|(?&lt;dur&gt;\d{1,3})\.\d{2}\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{3,21})\|(?&lt;eid&gt;[A-F0-9]{8})\|(?&lt;ename&gt;[^\|]{1,50})">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="2c29a9f9-01c7-447c-8f73-587e0ebd47ee" TriggerText="func${eid},${ename},${skill},${dur}" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers>
+          <Trigger Enabled="true" Source="None" Sequential="True" Name="VisualizeHots" Id="2c29a9f9-01c7-447c-8f73-587e0ebd47ee" RegularExpression="^func(?&lt;eid&gt;[A-F0-9]{8}),(?&lt;ename&gt;[\S ]{1,50}),(?&lt;skill&gt;[a-f0-9]{1,5}),(?&lt;dur&gt;\d{1,3})" DebugLevel="Info">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="d${eid}${skill}dur" VariableExpression="${_systemtimems}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" AuraName="${eid}${skill}ic" AuraImage="https://raw.githubusercontent.com/dansa/FFXIV-Trigg/master/Resources/status/${var:dHColor}/${skill}.png" AuraXIniExpression="${var:dHX}" AuraYIniExpression="${var:dHY}" AuraWIniExpression="34" AuraHIniExpression="34" AuraOIniExpression="100" AuraYTickExpression="${var:dHY}+${lvar:dHots.indexof(${eid}${skill})}*${var:dHPadding}" AuraTTLTickExpression="${var:d${eid}${skill}dur}-${_systemtimems}+(${dur}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Info">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dHots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" AuraName="${eid}${skill}bo" AuraImage="https://raw.githubusercontent.com/dansa/FFXIV-Trigg/master/Resources/pixBarOut${var:dHColor}.png" AuraXIniExpression="${var:dHX}+32" AuraYIniExpression="${var:dHY}+15" AuraWIniExpression="122" AuraHIniExpression="21" AuraOIniExpression="100" AuraYTickExpression="(${var:dHY}+15)+${lvar:dHots.indexof(${eid}${skill})}*${var:dHPadding}" AuraTTLTickExpression="${var:d${eid}${skill}dur}-${_systemtimems}+(${dur}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Warning">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dHots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" AuraName="${eid}${skill}bi" AuraImage="https://raw.githubusercontent.com/dansa/FFXIV-Trigg/master/Resources/pixBarIn.png" AuraXIniExpression="${var:dHX}+32" AuraYIniExpression="${var:dHY}+15" AuraWIniExpression="122" AuraHIniExpression="21" AuraOIniExpression="100" AuraYTickExpression="(${var:dHY}+15)+${lvar:dHots.indexof(${eid}${skill})}*${var:dHPadding}" AuraWTickExpression="122*(((${dur}*1000)+${var:d${eid}${skill}dur}-${_systemtimems})/(${dur}*1000))" AuraTTLTickExpression="${var:d${eid}${skill}dur}-${_systemtimems}+(${dur}*1000))" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Warning">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dHots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" TextAuraAlignment="TopLeft" TextAuraFontSize="9.75" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename}" TextAuraXIniExpression="${var:dHX}+34" TextAuraYIniExpression="${var:dHY}+5" TextAuraWIniExpression="400" TextAuraHIniExpression="34" TextAuraOIniExpression="100" TextAuraYTickExpression="(${var:dHY}+5)+${lvar:dHots.indexof(${eid}${skill})}*${var:dHPadding}" TextAuraTTLTickExpression="${var:d${eid}${skill}dur}-${_systemtimems}+(${dur}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" DebugLevel="Warning">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dHots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" TextAuraAlignment="TopLeft" TextAuraFontSize="9.75" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}tc" TextAuraExpression="${numeric:round((${var:d${eid}${skill}dur}-${_systemtimems}+(${dur}*1000))/1000),1)}" TextAuraXIniExpression="${var:dHX}+34+122" TextAuraYIniExpression="${var:dHY}+15" TextAuraWIniExpression="122" TextAuraHIniExpression="34" TextAuraOIniExpression="100" TextAuraYTickExpression="(${var:dHY}+18)+${lvar:dHots.indexof(${eid}${skill})}*${var:dHPadding}" TextAuraTTLTickExpression="${var:d${eid}${skill}dur}-${_systemtimems}+(${dur}*1000))" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" DebugLevel="Warning">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dHots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="dHots" ListVariableExpression="${eid}${skill}" ListVariableIndex="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dHots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" ListVariableOp="SortAlphaAsc" ListVariableName="dHots" ListVariableExpression="${eid}${skill}" ListVariableIndex="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dDots.indexof(${eid}${skill})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Source="None" Name="HotRemoval" Id="837861f7-3145-4b9d-904e-032dd2c51c5d" RegularExpression="^func(?&lt;eid&gt;[A-F0-9]{8}),(?&lt;skill&gt;[a-f0-9]{1,5})">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Remove" ListVariableName="dHots" ListVariableIndex="${lvar:dHots.indexof(${eid}${skill})}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableName="d${eid}${skill}dur" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="${eid}${skill}ta" TextAuraFontName="Microsoft Sans Serif" TriggerId="2c29a9f9-01c7-447c-8f73-587e0ebd47ee" TriggerText="${eid},${ename},Stormbite,${dur}" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="${eid}${skill}tc" TextAuraFontName="Microsoft Sans Serif" TriggerId="2c29a9f9-01c7-447c-8f73-587e0ebd47ee" TriggerText="${eid},${ename},Stormbite,${dur}" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" AuraOp="DeactivateAura" AuraName="${eid}${skill}bo" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Info">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" AuraOp="DeactivateAura" AuraName="${eid}${skill}bi" TextAuraAlignment="MiddleLeft" TextAuraFontSize="14.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="${eid}${skill}ta" TextAuraExpression="${ename} - ${skill} &gt; ${numeric:round((${var:d${eid}${skill}dur}-${_systemtime}+(${dur})),2)}" TextAuraXIniExpression="800" TextAuraYIniExpression="400" TextAuraWIniExpression="800" TextAuraHIniExpression="50" TextAuraOIniExpression="100" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Info">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="x CombatantRemoval" Id="423ccff7-2c12-47fb-915f-b93cdd096f64" RegularExpression="\[[\d:\.]{12}\] 04:(?&lt;eid&gt;[A-Fa-f0-9]{8}):Removing combatant (?&lt;ename&gt;[\S ]{1,50})\.  Max HP" DebugLevel="Verbose">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="837861f7-3145-4b9d-904e-032dd2c51c5d" TriggerText="func${eid},${lvar:dJobHots[1]}" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dDots.indexof(${eid}${lvar:dJobDots[1]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="837861f7-3145-4b9d-904e-032dd2c51c5d" TriggerText="func${eid},${lvar:dJobHots[2]}" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:dDots.indexof(${eid}${lvar:dJobDots[2]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers>
+      <Trigger Enabled="true" Sequential="True" Name="Setup" Id="75ee98ff-9e80-4a3b-877d-31c51c941cbd" RegularExpression="\[[\d:\.]{12}\] 03:(?&lt;id&gt;[A-F0-9]{8}):Added new combatant (?&lt;name&gt;[a-zA-Z-' ]{3,21})\([A-Za-z]{1,15}\)\.  Job: (?&lt;job&gt;[A-Za-z]{3})" DebugLevel="Verbose" PrevActions="Interrupt">
+        <Actions>
+          <Action OrderNumber="1" VariableOp="SetString" VariableName="dMyJob" VariableExpression="${func:toupper:${job}}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${func:toupper:${job}}" ExpressionTypeL="String" ExpressionR="${var:dMyJob}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="2" VariableOp="UnsetRegex" VariableName="d[A-F0-9]{8}.*" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="3" ListVariableOp="UnsetRegex" ListVariableName="d[A-Za-z]{0,5}(D|H)ots" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="d7d8fcf2-6121-4247-b5ae-446239e89bd0" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${_actionhistory[1]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="true" Grouping="And">
+          <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+        </Condition>
+      </Trigger>
+      <Trigger Enabled="true" Sequential="True" Name="- 0 dHot Settings" Id="aa54c7bd-1770-4b63-8b6a-d9caf48d318d" RegularExpression="" EditAutofire="True">
+        <Actions>
+          <Action OrderNumber="1" AuraName="dHotPreview" AuraImage="https://raw.githubusercontent.com/dansa/FFXIV-Trigg/master/Resources/dots/preview.png" AuraXIniExpression="968" AuraYIniExpression="445" AuraWIniExpression="160" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="dHPadding" VariableExpression="30" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="500" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="3" VariableOp="SetString" VariableName="dHColor" VariableExpression="Green" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="500" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="dHX" VariableExpression="${_imageaura[dHotPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="dHY" VariableExpression="${_imageaura[dHotPreview].y}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="6" AuraOp="DeactivateAura" AuraName="dHotPreview" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Sequential="True" Name="- 0 dDot Settings" Id="f489f757-5d48-4487-81c4-4a044fefe4c6" RegularExpression="" EditAutofire="True">
+        <Actions>
+          <Action OrderNumber="1" AuraName="dDotPreview" AuraImage="https://raw.githubusercontent.com/dansa/FFXIV-Trigg/master/Resources/dots/preview.png" AuraXIniExpression="765" AuraYIniExpression="442" AuraWIniExpression="160" AuraHIniExpression="40" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="dDPadding" VariableExpression="30" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="500" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="3" VariableOp="SetString" VariableName="dDColor" VariableExpression="Blue" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="500" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="dDX" VariableExpression="${_imageaura[dDotPreview].x}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="dDY" VariableExpression="${_imageaura[dDotPreview].y}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="6" AuraOp="DeactivateAura" AuraName="dDotPreview" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Name="Setup 2" Id="d7d8fcf2-6121-4247-b5ae-446239e89bd0" RegularExpression="" DebugLevel="Info" PrevActions="Interrupt">
+        <Actions>
+          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6ae4cfbc-be92-4511-bcfc-21675745e0a7" TriggerForce="regexp" ActionType="Trigger">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="AST" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="d5e46adb-cb4d-4fc4-89fc-d68a446c5cda" TriggerForce="regexp" ActionType="Trigger">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="AST" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="dc5ddd8e-fe12-4c1f-b906-493921506775" TriggerForce="regexp" ActionType="Trigger">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="BRD" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="ARC" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8b8a5698-1486-406c-8e72-95ad8e8b9193" TriggerForce="regexp" ActionType="Trigger">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="BLM" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="THM" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="5ed2e900-72f1-4a53-8c1e-e66c1a4ddd03" TriggerForce="regexp" ActionType="Trigger">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="LNC" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="DRG" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="482a5741-8a24-4b4d-a02b-7ca5ffad5746" TriggerText="${var:dMyJob}" TriggerForce="regexp" ActionType="Trigger">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="MCH" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="dfc6855c-5bcc-4078-b520-51f8c77b8035" TriggerForce="regexp" ActionType="Trigger">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="PUG" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="MNK" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="8" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1909bc9a-b97d-4b1b-ba8b-887ca34cc14e" TriggerForce="regexp" ActionType="Trigger">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="PLD" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="074186a8-1937-451d-81c2-b2c5a176adae" TriggerForce="regexp" ActionType="Trigger">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="SAM" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8c1e45f5-8863-4687-8ca1-19e291d2ce40" TriggerForce="regexp" ActionType="Trigger">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="SCH" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="bbeec17f-c2f1-4b9c-b0c2-0f2afb2bc3e4" TriggerForce="regexp" ActionType="Trigger">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="SMN" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="ACN" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="12" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="2664ecc5-34c9-46e1-995c-0267771ed2ae" TriggerForce="regexp" ActionType="Trigger">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="CNJ" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="WHM" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="13" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="9141e495-4840-4872-a4e9-174d2066904a" TriggerForce="regexp" ActionType="Trigger">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="CNJ" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+              <ConditionSingle Enabled="true" ExpressionL="${var:dMyJob}" ExpressionTypeL="String" ExpressionR="WHM" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+            </Condition>
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
