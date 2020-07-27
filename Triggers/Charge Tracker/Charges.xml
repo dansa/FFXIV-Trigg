@@ -1,65 +1,78 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="2bad55bd-e494-4655-a38c-3ad20bbd2b2f" Name="Charged Charges" Enabled="true">
+  <ExportedFolder Id="155b7d35-f039-49f3-a1a8-6aed639b309d" Name="Charged Charges" Enabled="true">
     <Folders>
-      <Folder Id="ed0b11a4-4389-48d2-92a2-4cccb2850595" Name="Z cleaning" Enabled="true">
+      <Folder Id="ec3e8b9a-bad3-4eb5-a7cb-e0ae66e127a4" Name="Z cleaning" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Source="None" Name="Cleanup" Id="4d10335c-a024-46a5-90db-9ee07dde2429" RegularExpression="">
+          <Trigger Enabled="true" Source="None" Name="Cleanup" Id="b6d66e9a-84c2-4bf4-9fdd-dd65751f6934" RegularExpression="">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="c5bef5d0-3ca2-41ad-abe4-e5ba212f73c9" ActionType="Trigger">
+              <Action OrderNumber="2" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="6061f735-5a08-4bd3-a75f-e90eaf78b428" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="b4649d73-f88f-42b3-8a8d-b0af3810c13d" ActionType="Trigger">
+              <Action OrderNumber="3" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="f28ab780-fb25-413b-9cc5-2e2b6c6f9ed1" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="d0fa23df-c38d-491f-80fa-c806782e0656" ActionType="Trigger">
+              <Action OrderNumber="4" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="f8a32918-0ffc-49df-9e1e-6942a2d6f3fb" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="5" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="b6ae89dd-3a82-4af7-a5fb-0188f23b301e" ActionType="Trigger">
+              <Action OrderNumber="5" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="05869ee9-e64e-48d4-a20d-3a78f635ca59" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="6" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="36ece1ad-7b93-418d-a87d-c4d122e9a331" ActionType="Trigger">
+              <Action OrderNumber="6" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="e0c9cc84-b1e8-4a72-9616-47ee5d4e0caf" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="7" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="104e70c5-6905-46e1-8d7c-3b36fdea77a0" ActionType="Trigger">
+              <Action OrderNumber="7" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="94b82b30-25cf-4fbc-8cc4-44d60705be8b" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="8" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="afe9b5dc-7971-4daa-a32c-c39216480af5" ActionType="Trigger">
+              <Action OrderNumber="8" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="50f9c84b-eab6-4061-a5b2-b3a01099c3e1" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="9" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="c3108b81-bae2-40a3-870e-bdedfc3644cf" ActionType="Trigger">
+              <Action OrderNumber="9" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="5cbf7dfd-5304-478c-b9cd-08363c4f8aad" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="10" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="21e07472-c283-48b3-864d-8fd706c22f4b" ActionType="Trigger">
+              <Action OrderNumber="10" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="c102c9a3-4dc9-4d23-bb03-128eaa74fcd0" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="11" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="8228686c-47d9-46b4-a43f-1a2167127cde" ActionType="Trigger">
+              <Action OrderNumber="11" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="46100b7f-ef09-45ac-9e8e-dcada77a5379" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="12" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="3a438ed4-3075-470a-bb27-22aeb72aac58" ActionType="Trigger">
+              <Action OrderNumber="12" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="ef16c124-4b4e-460c-97e2-44f93fff7b01" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="13" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="3b25f30b-384c-414c-8143-cec80d64c7cb" ActionType="Trigger">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-            </Actions>
-            <Condition Enabled="false" Grouping="Or" />
-          </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Name="Jobswap" Id="6e834653-5559-4475-9304-c570a12b9312" RegularExpression="^12\|[^|]+\|">
-            <Actions>
-              <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="4d10335c-a024-46a5-90db-9ee07dde2429" TriggerForce="regexp,conditions" ActionType="Trigger">
+              <Action OrderNumber="13" LogLevel="-1" VariableOp="UnsetRegex" VariableName="^dcd.+" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="74f7f880-7ad5-4a34-ba11-f94b190253df" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
           </Trigger>
-          <Trigger Enabled="true" Source="FFXIVNetwork" Name="Wipe" Id="e54ee0ec-ea4e-4185-88a1-b090ba78b5de" RegularExpression="^33\|[^|]+\|.{15}[01][03]">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Jobswap" Id="ffddb072-8b49-4f8f-a5f7-c9bd5da72a27" RegularExpression="^12\|[^|]+\|(?&lt;job&gt;\d{2})">
             <Actions>
-              <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="4d10335c-a024-46a5-90db-9ee07dde2429" TriggerForce="regexp,conditions" ActionType="Trigger">
+              <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="dJob" VariableExpression="${job}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="ffddb072-8b49-4f8f-a5f7-c9bd5da72a27" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b6d66e9a-84c2-4bf4-9fdd-dd65751f6934" TriggerForce="regexp,conditions" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:dJob}" ExpressionTypeL="Numeric" ExpressionR="${job}" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+            </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Name="Wipe" Id="8c7c0ef4-e40a-4251-a906-f885d3490cdf" RegularExpression="^33\|[^|]+\|.{15}10">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b6d66e9a-84c2-4bf4-9fdd-dd65751f6934" TriggerForce="regexp,conditions" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Zone Change" Id="28967912-b41e-4f34-9ecc-03fd95cb9b5f" RegularExpression="^02\|[^|]+\|">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b6d66e9a-84c2-4bf4-9fdd-dd65751f6934" TriggerForce="regexp,conditions" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -67,15 +80,15 @@
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="262144" Id="543af792-1646-4233-906e-35f8e2624a58" Name="PLD" Enabled="true">
+      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="262144" Id="dcc36d96-72f8-4e3c-99df-0d978e17e5f6" Name="PLD" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Sequential="True" Name="Intervene" Id="9edd67a7-a1d8-4cc6-9420-83586eeffc6d" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;404D):(?&lt;skill&gt;[^:]{1,20})">
+          <Trigger Enabled="true" Sequential="True" Name="Intervene" Id="97b6680f-2277-4257-9538-d9a12f69733a" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;404D):(?&lt;skill&gt;[^:]{1,20})">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="dcd${sid}" VariableExpression="${skill}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b6ae89dd-3a82-4af7-a5fb-0188f23b301e" TriggerText="30:${sid}" ActionType="Trigger">
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="05869ee9-e64e-48d4-a20d-3a78f635ca59" TriggerText="30:${sid}" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -85,15 +98,15 @@
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="2147483648" Id="1cc9925b-9de3-4b1c-8178-bbc093d3086c" Name="DRK" Enabled="true">
+      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="2147483648" Id="b6edc783-dc8f-471d-9ad8-dbc88ea41fbc" Name="DRK" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Sequential="True" Name="Plunge" Id="c265dc28-2aed-412d-b8ac-d6660e1cdd28" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;E38):(?&lt;skill&gt;[^:]{1,20})">
+          <Trigger Enabled="true" Sequential="True" Name="Plunge" Id="c69583ff-fb36-44b9-b76b-3f259fce5b9e" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;E38):(?&lt;skill&gt;[^:]{1,20})">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="dcd${sid}" VariableExpression="${skill}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b6ae89dd-3a82-4af7-a5fb-0188f23b301e" TriggerText="30:${sid}" ActionType="Trigger">
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="05869ee9-e64e-48d4-a20d-3a78f635ca59" TriggerText="30:${sid}" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -103,15 +116,15 @@
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="1048576" Id="0964601f-ab60-4e19-912e-f76f278c6bea" Name="WAR" Enabled="true">
+      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="1048576" Id="32aa91d9-ce95-4cb6-b78d-f9a124ccbac3" Name="WAR" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Sequential="True" Name="Infuriate" Id="48c8a0c7-3bbe-4b6f-a52b-8aa71e56fc22" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;34):(?&lt;skill&gt;[^:]{1,20})">
+          <Trigger Enabled="true" Sequential="True" Name="Infuriate" Id="bb8551e4-7f36-4166-b3bc-ee2fbaa9e87d" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;34):(?&lt;skill&gt;[^:]{1,20})">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="dcd${sid}" VariableExpression="${skill}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b6ae89dd-3a82-4af7-a5fb-0188f23b301e" TriggerText="60:${sid}" ActionType="Trigger">
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="05869ee9-e64e-48d4-a20d-3a78f635ca59" TriggerText="60:${sid}" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -119,9 +132,9 @@
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Name="Skills" Id="20aebc5c-fe93-4d12-a30e-f65b0f5703a9" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(DDE|DDD|4051|404F):[^:]+:(?&lt;tg&gt;[A-F0-9]{8})" DebugLevel="Verbose" PeriodRefire="Deny" RefirePeriodExpression="250">
+          <Trigger Enabled="true" Name="Skills" Id="92b376bb-b057-4a60-8913-8b1412eed8af" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(DDE|DDD|4051|404F):[^:]+:(?&lt;tg&gt;[A-F0-9]{8})" DebugLevel="Verbose" PeriodRefire="Deny" RefirePeriodExpression="250">
             <Actions>
-              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b4649d73-f88f-42b3-8a8d-b0af3810c13d" TriggerText="60:34:5" ActionType="Trigger">
+              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="f28ab780-fb25-413b-9cc5-2e2b6c6f9ed1" TriggerText="60:34:5" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -133,15 +146,15 @@
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="536870912" Id="81bd808b-3d16-4e3e-89bb-ac7d8649e4ba" Name="NIN" Enabled="true">
+      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="536870912" Id="bf8f452c-4829-4f23-9b53-8dd9f91fb678" Name="NIN" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Sequential="True" Name="Shukuchi" Id="c985c377-5706-4c97-b69c-ba6c0462f631" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;8D6):(?&lt;skill&gt;[^:]{1,20})">
+          <Trigger Enabled="true" Sequential="True" Name="Shukuchi" Id="959d152b-5c18-4ae6-9e86-752a398c50ee" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;8D6):(?&lt;skill&gt;[^:]{1,20})">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="dcd${sid}" VariableExpression="${skill}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b6ae89dd-3a82-4af7-a5fb-0188f23b301e" TriggerText="60:${sid}" ActionType="Trigger">
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="05869ee9-e64e-48d4-a20d-3a78f635ca59" TriggerText="60:${sid}" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -149,9 +162,9 @@
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Name="Mudras" Id="fb7a4743-df50-4057-8bf8-81dfdfd9f434" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(8D[ABC]|49B[CDE]):" DebugLevel="Verbose">
+          <Trigger Enabled="true" Name="Mudras" Id="960246e5-9b8c-4c40-8661-4a4ce664084c" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(8D[ABC]|49B[CDE]):" DebugLevel="Verbose">
             <Actions>
-              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b4649d73-f88f-42b3-8a8d-b0af3810c13d" TriggerText="60:8D6:60" ActionType="Trigger">
+              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="f28ab780-fb25-413b-9cc5-2e2b6c6f9ed1" TriggerText="60:8D6:60" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -162,17 +175,17 @@
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="1073741824" Id="082d2d1a-8b70-4120-88db-3b905b638046" Name="MCH" Enabled="true">
+      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="1073741824" Id="6a71be07-9747-4e27-b739-cfa2f09c96ac" Name="MCH" Enabled="true">
         <Folders>
-          <Folder Id="2fcedec6-5bb4-4ca0-9dad-120fa8d93a74" Name="Gauss Functions" Enabled="true">
+          <Folder Id="6bbf7d2c-1e0a-4c26-8abb-f60b58e64226" Name="Gauss Functions" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeGain" Id="104e70c5-6905-46e1-8d7c-3b36fdea77a0" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5}):(?&lt;time&gt;\d{1,3})" DebugLevel="Verbose">
+              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeGain" Id="94b82b30-25cf-4fbc-8cc4-44d60705be8b" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5}):(?&lt;time&gt;\d{1,3})" DebugLevel="Verbose">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="dcd${skill}cd" VariableExpression="${var:dcd${skill}cd}-(${time}*1000)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="36ece1ad-7b93-418d-a87d-c4d122e9a331" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="e0c9cc84-b1e8-4a72-9616-47ee5d4e0caf" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
@@ -180,7 +193,7 @@
                   <ConditionSingle Enabled="true" ExpressionL="${var:dcd${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                 </Condition>
               </Trigger>
-              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeTTS" Id="afe9b5dc-7971-4daa-a32c-c39216480af5" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})" PrevActions="Interrupt">
+              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeTTS" Id="50f9c84b-eab6-4061-a5b2-b3a01099c3e1" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})" PrevActions="Interrupt">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="${var:dcd${skill}}" VariableOp="SetNumeric" VariableName="${skill}charges" VariableExpression="${var:${skill}charges}-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="(${var:dcd${skill}cd}-${_systemtimems}+(${cooldown}*1000))-5000" RefireInterrupt="True">
                     <Condition Enabled="true" Grouping="Or">
@@ -190,7 +203,7 @@
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
-              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeUse" Id="c3108b81-bae2-40a3-870e-bdedfc3644cf" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})">
+              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeUse" Id="5cbf7dfd-5304-478c-b9cd-08363c4f8aad" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="dcd${skill}cd" VariableExpression="if(${var:dcd${skill}charges},${var:dcd${skill}cd},${_systemtimems})" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -198,15 +211,15 @@
                   <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="dcd${skill}charges" VariableExpression="${var:dcd${skill}charges}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="36ece1ad-7b93-418d-a87d-c4d122e9a331" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="e0c9cc84-b1e8-4a72-9616-47ee5d4e0caf" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
-              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeCD" Id="36ece1ad-7b93-418d-a87d-c4d122e9a331" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})" PrevActions="Interrupt">
+              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeCD" Id="e0c9cc84-b1e8-4a72-9616-47ee5d4e0caf" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})" PrevActions="Interrupt">
                 <Actions>
-                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="afe9b5dc-7971-4daa-a32c-c39216480af5" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="50f9c84b-eab6-4061-a5b2-b3a01099c3e1" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:dcd${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
@@ -219,7 +232,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${var:dcd${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="36ece1ad-7b93-418d-a87d-c4d122e9a331" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="e0c9cc84-b1e8-4a72-9616-47ee5d4e0caf" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:dcd${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
@@ -231,15 +244,15 @@
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="4ea32533-1c98-4f76-b79b-c027d76dffcb" Name="Ricochet Functions" Enabled="true">
+          <Folder Id="b66702b6-6b67-4ff5-aa26-7a25ec0722e5" Name="Ricochet Functions" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeGain" Id="8228686c-47d9-46b4-a43f-1a2167127cde" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5}):(?&lt;time&gt;\d{1,3})" DebugLevel="Verbose">
+              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeGain" Id="46100b7f-ef09-45ac-9e8e-dcada77a5379" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5}):(?&lt;time&gt;\d{1,3})" DebugLevel="Verbose">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="dcd${skill}cd" VariableExpression="${var:dcd${skill}cd}-(${time}*1000)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="21e07472-c283-48b3-864d-8fd706c22f4b" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c102c9a3-4dc9-4d23-bb03-128eaa74fcd0" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
@@ -247,7 +260,7 @@
                   <ConditionSingle Enabled="true" ExpressionL="${var:dcd${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                 </Condition>
               </Trigger>
-              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeTTS" Id="3a438ed4-3075-470a-bb27-22aeb72aac58" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})" PrevActions="Interrupt">
+              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeTTS" Id="ef16c124-4b4e-460c-97e2-44f93fff7b01" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})" PrevActions="Interrupt">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="${var:dcd${skill}}" VariableOp="SetNumeric" VariableName="${skill}charges" VariableExpression="${var:${skill}charges}-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="(${var:dcd${skill}cd}-${_systemtimems}+(${cooldown}*1000))-5000" RefireInterrupt="True">
                     <Condition Enabled="true" Grouping="Or">
@@ -257,7 +270,7 @@
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
-              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeUse" Id="3b25f30b-384c-414c-8143-cec80d64c7cb" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})">
+              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeUse" Id="74f7f880-7ad5-4a34-ba11-f94b190253df" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="dcd${skill}cd" VariableExpression="if(${var:dcd${skill}charges},${var:dcd${skill}cd},${_systemtimems})" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -265,15 +278,15 @@
                   <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="dcd${skill}charges" VariableExpression="${var:dcd${skill}charges}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="21e07472-c283-48b3-864d-8fd706c22f4b" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c102c9a3-4dc9-4d23-bb03-128eaa74fcd0" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
-              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeCD" Id="21e07472-c283-48b3-864d-8fd706c22f4b" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})" PrevActions="Interrupt">
+              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeCD" Id="c102c9a3-4dc9-4d23-bb03-128eaa74fcd0" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})" PrevActions="Interrupt">
                 <Actions>
-                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3a438ed4-3075-470a-bb27-22aeb72aac58" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="ef16c124-4b4e-460c-97e2-44f93fff7b01" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:dcd${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
@@ -286,7 +299,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${var:dcd${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="21e07472-c283-48b3-864d-8fd706c22f4b" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c102c9a3-4dc9-4d23-bb03-128eaa74fcd0" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:dcd${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
@@ -300,12 +313,12 @@
           </Folder>
         </Folders>
         <Triggers>
-          <Trigger Enabled="true" Sequential="True" Name="Gauss" Id="642b74ce-ae88-4da7-b950-c61c5a6f8484" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;B3A):(?&lt;skill&gt;[^:]{1,20})">
+          <Trigger Enabled="true" Sequential="True" Name="Gauss" Id="dea8ba7d-f66d-4276-b6db-e12460bafd3e" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;B3A):(?&lt;skill&gt;[^:]{1,20})">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="dcd${sid}" VariableExpression="${skill}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c3108b81-bae2-40a3-870e-bdedfc3644cf" TriggerText="30:${sid}" ActionType="Trigger">
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="5cbf7dfd-5304-478c-b9cd-08363c4f8aad" TriggerText="30:${sid}" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -313,12 +326,12 @@
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Name="Skills" Id="6ba71990-00ac-433b-b252-fabeff6b0fa6" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):1CF2:[^:]+:(?&lt;tg&gt;[A-F0-9]{8})" DebugLevel="Verbose" PeriodRefire="Deny" RefirePeriodExpression="250">
+          <Trigger Enabled="true" Name="Skills" Id="62726e1a-bb9a-44c8-af44-05b70bb571ff" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):1CF2:[^:]+:(?&lt;tg&gt;[A-F0-9]{8})" DebugLevel="Verbose" PeriodRefire="Deny" RefirePeriodExpression="250">
             <Actions>
-              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="104e70c5-6905-46e1-8d7c-3b36fdea77a0" TriggerText="30:B3A:15" ActionType="Trigger">
+              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="94b82b30-25cf-4fbc-8cc4-44d60705be8b" TriggerText="30:B3A:15" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8228686c-47d9-46b4-a43f-1a2167127cde" TriggerText="30:B4A:15" ActionType="Trigger">
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="46100b7f-ef09-45ac-9e8e-dcada77a5379" TriggerText="30:B4A:15" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -327,12 +340,12 @@
               <ConditionSingle Enabled="true" ExpressionL="${tg}" ExpressionTypeL="String" ExpressionR="E0000000" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="Ricochet" Id="7302f479-78d2-4029-b42c-b6ce945ff8d7" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;B4A):(?&lt;skill&gt;[^:]{1,20})">
+          <Trigger Enabled="true" Sequential="True" Name="Ricochet" Id="59acff27-c79a-4a73-b083-bdff8804958f" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;B4A):(?&lt;skill&gt;[^:]{1,20})">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="dcd${sid}" VariableExpression="${skill}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3b25f30b-384c-414c-8143-cec80d64c7cb" TriggerText="30:${sid}" ActionType="Trigger">
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="74f7f880-7ad5-4a34-ba11-f94b190253df" TriggerText="30:${sid}" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -342,15 +355,15 @@
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="524288" Id="5b98f087-646b-41a9-9132-85015266bdff" Name="MNK" Enabled="true">
+      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="524288" Id="8e7ad0a6-e777-4418-903e-ed5dd8fc9d80" Name="MNK" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Sequential="True" Name="Shoulder" Id="8cb85523-63a9-4d94-bcc1-5f4271954482" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;47):(?&lt;skill&gt;[^:]{1,20})">
+          <Trigger Enabled="true" Sequential="True" Name="Shoulder" Id="5ff90629-8a6f-4cb9-9798-efb601c29116" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;47):(?&lt;skill&gt;[^:]{1,20})">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="dcd${sid}" VariableExpression="${skill}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b6ae89dd-3a82-4af7-a5fb-0188f23b301e" TriggerText="30:${sid}" ActionType="Trigger">
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="05869ee9-e64e-48d4-a20d-3a78f635ca59" TriggerText="30:${sid}" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -360,15 +373,15 @@
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="68719476736" Id="d72f3b25-3b8d-4c79-9583-8c3f7151f09d" Name="GNB" Enabled="true">
+      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="68719476736" Id="e21276b1-14f9-4bc7-8652-b44915067d50" Name="GNB" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Sequential="True" Name="Rough Divide" Id="e301f7b0-85f6-4b74-b5eb-6ecba295e9fd" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;3F1A):(?&lt;skill&gt;[^:]{1,20})">
+          <Trigger Enabled="true" Sequential="True" Name="Rough Divide" Id="839dda8d-79ff-48c0-9e01-b29432ff3c7e" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;3F1A):(?&lt;skill&gt;[^:]{1,20})">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="dcd${sid}" VariableExpression="${skill}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b6ae89dd-3a82-4af7-a5fb-0188f23b301e" TriggerText="30:${sid}" ActionType="Trigger">
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="05869ee9-e64e-48d4-a20d-3a78f635ca59" TriggerText="30:${sid}" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -378,14 +391,14 @@
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="4294967296" Id="9b743740-da5e-41de-baf9-139911af9593" Name="AST" Enabled="true">
+      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="4294967296" Id="f7c89f1a-8af6-455b-afe3-75e9b9bb1779" Name="AST" Enabled="true">
         <Folders>
-          <Folder Id="bc210e79-a198-4bf7-9110-c31c80ea2afb" Name="Essential Dignity Functions" Enabled="true">
+          <Folder Id="4fd805ca-7c7e-44bd-9111-746541b7396f" Name="Essential Dignity Functions" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeCD" Id="8e24b5eb-fd97-4287-b425-77be207fa090" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})" PrevActions="Interrupt">
+              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeCD" Id="2d996716-ca40-43ed-ba19-5c2bf31446f7" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})" PrevActions="Interrupt">
                 <Actions>
-                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="19e0c1b5-b0e8-4cd9-b322-8e86d31ff769" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="a6975e32-0989-4c40-b901-43f5a6d658de" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:dcd${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
@@ -398,7 +411,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${var:dcd${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8e24b5eb-fd97-4287-b425-77be207fa090" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="2d996716-ca40-43ed-ba19-5c2bf31446f7" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:dcd${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                     </Condition>
@@ -408,12 +421,12 @@
                   <ConditionSingle Enabled="true" ExpressionL="${var:dcd${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                 </Condition>
               </Trigger>
-              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeGain" Id="e7c21561-109e-4b76-8996-81875ccba59a" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5}):(?&lt;time&gt;\d{1,3})" DebugLevel="Verbose">
+              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeGain" Id="aa345ee3-01f6-407c-a791-5846017f542a" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5}):(?&lt;time&gt;\d{1,3})" DebugLevel="Verbose">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="dcd${skill}cd" VariableExpression="${var:dcd${skill}cd}-(${time}*1000)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8e24b5eb-fd97-4287-b425-77be207fa090" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="2d996716-ca40-43ed-ba19-5c2bf31446f7" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
@@ -421,7 +434,7 @@
                   <ConditionSingle Enabled="true" ExpressionL="${var:dcd${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                 </Condition>
               </Trigger>
-              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeTTS" Id="19e0c1b5-b0e8-4cd9-b322-8e86d31ff769" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})" PrevActions="Interrupt">
+              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeTTS" Id="a6975e32-0989-4c40-b901-43f5a6d658de" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})" PrevActions="Interrupt">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="${var:dcd${skill}}" VariableOp="SetNumeric" VariableName="${skill}charges" VariableExpression="${var:${skill}charges}-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="(${var:dcd${skill}cd}-${_systemtimems}+(${cooldown}*1000))-5000" RefireInterrupt="True">
                     <Condition Enabled="true" Grouping="Or">
@@ -431,7 +444,7 @@
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
-              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeUse" Id="e5f23827-2958-4131-a989-5f09b41c0c35" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})">
+              <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeUse" Id="a228ef21-5920-4f83-b0ed-e13e13d5baab" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="dcd${skill}cd" VariableExpression="if(${var:dcd${skill}charges},${var:dcd${skill}cd},${_systemtimems})" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -439,7 +452,7 @@
                   <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="dcd${skill}charges" VariableExpression="${var:dcd${skill}charges}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8e24b5eb-fd97-4287-b425-77be207fa090" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="2d996716-ca40-43ed-ba19-5c2bf31446f7" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
@@ -449,12 +462,12 @@
           </Folder>
         </Folders>
         <Triggers>
-          <Trigger Enabled="true" Sequential="True" Name="Redraw" Id="6db74b89-43a9-4b12-8742-1f5140444e6d" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;E09):(?&lt;skill&gt;[^:]{1,20})">
+          <Trigger Enabled="true" Sequential="True" Name="Redraw" Id="9356e64c-e52a-46e8-a06e-7e7558e483e2" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;E09):(?&lt;skill&gt;[^:]{1,20})">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="dcd${sid}" VariableExpression="${skill}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b6ae89dd-3a82-4af7-a5fb-0188f23b301e" TriggerText="30:${sid}" ActionType="Trigger">
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="05869ee9-e64e-48d4-a20d-3a78f635ca59" TriggerText="30:${sid}" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -462,12 +475,12 @@
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="Essential Dignity" Id="09a30cb4-c6b9-40ee-a32d-882263347bfd" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;E1E):(?&lt;skill&gt;[^:]{1,20})">
+          <Trigger Enabled="true" Sequential="True" Name="Essential Dignity" Id="8898440e-1c13-439e-b68b-9819624a8c30" RegularExpression="^[^\]]+\] 1[56]:[A-F0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):(?&lt;sid&gt;E1E):(?&lt;skill&gt;[^:]{1,20})">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="dcd${sid}" VariableExpression="${skill}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="e5f23827-2958-4131-a989-5f09b41c0c35" TriggerText="40:${sid}" ActionType="Trigger">
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="a228ef21-5920-4f83-b0ed-e13e13d5baab" TriggerText="40:${sid}" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -480,9 +493,9 @@
       </Folder>
     </Folders>
     <Triggers>
-      <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeCD" Id="c5bef5d0-3ca2-41ad-abe4-e5ba212f73c9" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})" PrevActions="Interrupt">
+      <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeCD" Id="6061f735-5a08-4bd3-a75f-e90eaf78b428" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})" PrevActions="Interrupt">
         <Actions>
-          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="d0fa23df-c38d-491f-80fa-c806782e0656" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
+          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="f8a32918-0ffc-49df-9e1e-6942a2d6f3fb" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${var:dcd${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
             </Condition>
@@ -495,7 +508,7 @@
               <ConditionSingle Enabled="true" ExpressionL="${var:dcd${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
             </Condition>
           </Action>
-          <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c5bef5d0-3ca2-41ad-abe4-e5ba212f73c9" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
+          <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6061f735-5a08-4bd3-a75f-e90eaf78b428" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${var:dcd${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
             </Condition>
@@ -505,12 +518,12 @@
           <ConditionSingle Enabled="true" ExpressionL="${var:dcd${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
         </Condition>
       </Trigger>
-      <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeGain" Id="b4649d73-f88f-42b3-8a8d-b0af3810c13d" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5}):(?&lt;time&gt;\d{1,3})" DebugLevel="Verbose">
+      <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeGain" Id="f28ab780-fb25-413b-9cc5-2e2b6c6f9ed1" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5}):(?&lt;time&gt;\d{1,3})" DebugLevel="Verbose">
         <Actions>
           <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="dcd${skill}cd" VariableExpression="${var:dcd${skill}cd}-(${time}*1000)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c5bef5d0-3ca2-41ad-abe4-e5ba212f73c9" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
+          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6061f735-5a08-4bd3-a75f-e90eaf78b428" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
@@ -518,7 +531,7 @@
           <ConditionSingle Enabled="true" ExpressionL="${var:dcd${skill}charges}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
         </Condition>
       </Trigger>
-      <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeUse" Id="b6ae89dd-3a82-4af7-a5fb-0188f23b301e" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})">
+      <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeUse" Id="05869ee9-e64e-48d4-a20d-3a78f635ca59" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})">
         <Actions>
           <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="dcd${skill}cd" VariableExpression="if(${var:dcd${skill}charges},${var:dcd${skill}cd},${_systemtimems})" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
@@ -526,13 +539,13 @@
           <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="dcd${skill}charges" VariableExpression="${var:dcd${skill}charges}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c5bef5d0-3ca2-41ad-abe4-e5ba212f73c9" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
+          <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="6061f735-5a08-4bd3-a75f-e90eaf78b428" TriggerText="${cooldown}:${skill}" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeTTS" Id="d0fa23df-c38d-491f-80fa-c806782e0656" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})" PrevActions="Interrupt">
+      <Trigger Enabled="true" Source="None" Sequential="True" Name="ChargeTTS" Id="f8a32918-0ffc-49df-9e1e-6942a2d6f3fb" RegularExpression="(?&lt;cooldown&gt;\d{1,3}):(?&lt;skill&gt;[A-F0-9]{1,5})" PrevActions="Interrupt">
         <Actions>
           <Action OrderNumber="1" UseTTSTextExpression="${var:dcd${skill}}" VariableOp="SetNumeric" VariableName="${skill}charges" VariableExpression="${var:${skill}charges}-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="(${var:dcd${skill}cd}-${_systemtimems}+(${cooldown}*1000))-5000" RefireInterrupt="True">
             <Condition Enabled="true" Grouping="Or">
