@@ -1,0 +1,359 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="2e000dc1-be37-4597-b80a-2a982a733853" Name="The Dumb Monker Suite 2.0" Enabled="true">
+    <Folders>
+      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="524290" Id="1b485608-f724-4309-8b12-d1ffbd55ac75" Name="Stamps" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="TS Timer" Id="285eab25-31f8-4bd8-8cee-a5a8d99c7292" RegularExpression="^\[[\d:\.]{12}\] 1A:[A-Z0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}) gains the effect of Twin Snakes from [a-zA-Z-' ]{1,31} for (?&lt;time&gt;[\d]{2}[,\.][\d]{2})">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="tstime" VariableExpression="${_systemtimems}+(${time}*1000)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="Demo Timer" Id="d2a391de-8893-4641-8285-ecae2bbda824" RegularExpression="^\[[\d:\.]{12}\] 1A:(?&lt;id&gt;[A-Z0-9]{8}):[\S ]{1,51} gains the effect of Demolish from (?&lt;name&gt;[a-zA-Z-' ]{1,31}) for (?&lt;time&gt;[\d]{2}[,\.][\d]{2})">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="demotick" VariableExpression="${_systemtimems}+(${time}*1000)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="524290" Id="cb2cc0da-f7e1-4a46-b356-730c200949e7" Name="Perfect Balance" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="GetEffect" Id="948b1e42-d842-4ada-8040-5168c17e6e02" RegularExpression="^\[[\d:\.]{12}\] 15:[A-Z0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}):45:">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="mPB" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="mOpo-Opo" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Name="DropEffect" Id="0f05ef1b-087a-4cd7-9b17-3c7a47c96fac" RegularExpression="^30\|[^|]+\|6e\|Perfect Balance\|0.00\|[A-F0-9]{8}\|(?&lt;name&gt;[a-zA-Z-' ]{1,31})" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" VariableName="mPB" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" FolderOp="DisableFolder" FolderId="a7a0da64-4566-4a26-aa1d-c78ed6de4004" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="513e2a8c-0ae2-4817-81f6-a27b4a5000d2" TriggerForce="regexp,conditions" ActionType="Trigger" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="524288" Id="861caf11-51dc-4317-ae7e-1520f34ac1ae" Name="Misc" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="Garbage Collection - Death" Id="417688dc-fc6d-471d-bae3-904f2c5a6254" RegularExpression="^\[[\d:\.]{12}\] 19:(?&lt;name&gt;[a-zA-Z-' ]{1,31}) was defeated by">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="2960cb2f-9602-407a-8356-4949832ea116" TriggerForce="regexp,conditions" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="Garbage Collection - Zone Change" Id="e3ba1afb-6a34-4096-bb9e-7d950c2b1fe0" RegularExpression="^02\|[^|]+\|">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="2960cb2f-9602-407a-8356-4949832ea116" TriggerForce="regexp,conditions" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Source="None" Name="Garbage Day" Id="2960cb2f-9602-407a-8356-4949832ea116" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="Leaden Fist" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="mOpo-Opo" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="mCoeurl" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="mRaptor" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="tstime" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="demotick" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="Garbage Collection - Job Swap" Id="2c2fe662-2b07-4b15-9990-989fbbbd314c" RegularExpression="^\[[\d:\.]{12}\] 00:0839:(Du|Vous|You) (bist|êtes|change) (nun|maintenant|to) (?&lt;class&gt;[a-zA-Z-' ]{1,31}).">
+            <Actions>
+              <Action OrderNumber="-1" VariableName="mOpo-Opo" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" VariableName="mRaptor" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" VariableName="mCoeurl" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" LogLevel="-1" VariableName="mPB" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" VariableName="tstime" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" VariableName="demotick" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" AuraOp="DeactivateAura" AuraName="bootcombo" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" VariableName="Leaden Fist" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" AuraOp="DeactivateAura" AuraName="dkcombo" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" AuraOp="DeactivateAura" AuraName="tscombo" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="12" AuraOp="DeactivateAura" AuraName="democombo" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${class}" ExpressionTypeL="String" ExpressionR="(Mönch|moine|monk)" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="Leaden" Id="df0b5df8-d470-43d8-b1c2-cb49c2f2752c" RegularExpression="^\[[\d:\.]{12}\] (?&lt;gains&gt;1[AE]):[A-Z0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}) (gains|loses) the effect of Leaden Fist">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="Leaden Fist" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${gains}" ExpressionTypeL="String" ExpressionR="1A" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="Leaden Fist" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${gains}" ExpressionTypeL="String" ExpressionR="1E" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="Garbage Collection - Wipe" Id="394f4d33-b79b-435d-b616-ceb605a3f9d9" RegularExpression="^33\|[^|]+\|.{15}10">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="2960cb2f-9602-407a-8356-4949832ea116" TriggerForce="regexp,conditions" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="Chat boot" Id="19238fe9-39f8-487d-a820-634d9b04e04e" RegularExpression="^\[[\d:\.]{12}\] 00:00\d\d:(?&lt;class&gt;[a-zA-Z-' ]{1,31}:)?!gomnk">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="ca829c7c-33eb-4c0a-acf0-7f6eb2116776" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="1c23242f-e237-40bd-8ae9-5e6ece1858e6" Name="- Main - Readme Inside" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="false" Name="- README (Open and check Description tab!)" Id="42f12477-3354-42e9-a219-0f6dca54e266" RegularExpression="" Description="&#xD;&#xA;--- The Suite itself gets activated in two ways. &#xD;&#xA;       - Either you swap to the Monk job (swap out/into the job if you are already playing monk)&#xD;&#xA; - Probably the main way you will be initializing the triggers.&#xD;&#xA;       - You type !gomnk in any FFXIV chat, &quot;/e !gomnk&quot; works if you dont want to have it displayed for others.&#xD;&#xA; - Useful if you forgot to start things up before joining a duty.&#xD;&#xA;    &#xD;&#xA;    An image should display on your screen when it loaded up properly, unless you deleted the splash action then well.. It will load anyway.&#xD;&#xA;&#xD;&#xA;    - Once the suite has been initialized, it will work through any instance swaps, deaths and whatnot. &#xD;&#xA;      But if you exit ACT for any reason you have to &quot;restart&quot; the suite.&#xD;&#xA;&#xD;&#xA;-------------------------------------------------------&#xD;&#xA;&#xD;&#xA;Setup guide!&#xD;&#xA;&#xD;&#xA;- ( Copy the whole suite folder to Local Triggers if you used the Repository feature to add it )&#xD;&#xA;&#xD;&#xA;All the setup is in the &quot;- Setup&quot; trigger (Should be below this one!)&#xD;&#xA;&#xD;&#xA;1 - Change the links in the variables if you want to use different image combo indicators.&#xD;&#xA;         (&quot;Set scalar variable (combogifcolor)..&quot; &amp; &quot;Set scalar variable (combogif)..&quot;)&#xD;&#xA;        &#xD;&#xA;    I have the following color options uploaded and ready if you want to use them&#xD;&#xA;       Orange -  https://raw.githubusercontent.com/dansa/FFXIV-Trigg/master/Resources/ComboGIF.gif&#xD;&#xA;       Red -  https://raw.githubusercontent.com/dansa/FFXIV-Trigg/master/Resources/ComboGIFRed.gif&#xD;&#xA;       Blue - https://raw.githubusercontent.com/dansa/FFXIV-Trigg/master/Resources/ComboGIFblue.gif&#xD;&#xA;       Green -   https://raw.githubusercontent.com/dansa/FFXIV-Trigg/master/Resources/ComboGIFgreen.gif&#xD;&#xA;&#xD;&#xA;       *Should you have any color requests I can probably make and upload other ones, &#xD;&#xA;         my discord is dansa#5509 and you can reach me for any suggestions/help&#xD;&#xA;        &#xD;&#xA;   * If you prefer to keep the images on your local drive over loading from the interwebs, it will work fine to use a local &quot;link&quot;, such as&#xD;&#xA;     C:\Program Files (x86)\Advanced Combat Tracker\Triggers\ComboGIFgreen.gif&#xD;&#xA;     Otherwise keep those variables as is. &#xD;&#xA;  Note that online images get cached on your disk so there's no real benefit to a local image unless you can't access github for some reason.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;2 - Adjust the X and Y position of the proc indicators to their corresponding action on your hotbar.&#xD;&#xA;     - Open up the &quot;Activate image aura (bootcombo/dkcombo/etc..)&quot; actions and adjust one by one&#xD;&#xA;     - Use the &quot;Use visual guide for placement&quot; button for easy positioning, &#xD;&#xA;         - Basically you move the image and right click &amp; Save changes. &#xD;&#xA;         - Tweak the X/Y pixel values to get more precice. &#xD;&#xA;         - Remember you can use the &quot;Test Action&quot; button to see exactly where it will be and how it will look.&#xD;&#xA;     - Tweak the Width/Height values if necessary. For a 110% size hotbar and 48x48 seems perfect, but you might use something else.&#xD;&#xA;&#xD;&#xA;You should be all set at this point really.&#xD;&#xA;&#xD;&#xA;Optional-&#xD;&#xA;3 - If you don't like the little splash image that shows up when the suite is intialized, delete/uncheck the actions starting with&#xD;&#xA;   - Activate image aura (SupaLoada)..&#xD;&#xA;   - After (5000)ms, deactivate..&#xD;&#xA;In the Setup trigger..&#xD;&#xA;&#xD;&#xA;-------------------------------------------------------&#xD;&#xA;&#xD;&#xA;Some things to note:&#xD;&#xA;&#xD;&#xA;*** I am not claiming this will make you play monk perfectly, nor that it will 100% tell you the correct button to press every time. ***&#xD;&#xA;&#xD;&#xA;It's a suite of simple helpers, that I made because sometimes my brainpower is too small to know wtf I am doing. It is not an AI.&#xD;&#xA;&#xD;&#xA;* Demo does NOT track demo on multiple targets, sorry. &#xD;&#xA;    I tried to make this work but it was a headache keeping all the dot timers going on multiple target IDs in a good way.&#xD;&#xA;    So I'll stick with this basic method of just counting down from the last demo application for now.&#xD;&#xA;&#xD;&#xA;* There will be nothing shown for the first raw/stanceless gcd after PB has faded. &#xD;&#xA;    This is simply because the action you want to take is too situational and I can't really guess it for you.&#xD;&#xA;    I believe most of the time you just want to raw DK though, even with leaden fist up, as you wont guarantee the crit. &#xD;&#xA;    But I am not a mentor nor a monk expert so don't listen to me.">
+            <Actions />
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="- Setup" Id="ca829c7c-33eb-4c0a-acf0-7f6eb2116776" RegularExpression="^\[[\d:\.]{12}\] 00:0839:(Du|Vous|You) (bist|êtes|change) (nun|maintenant|to) (Mönch|moine|monk)\." DebugLevel="Warning" EditAutofire="True">
+            <Actions>
+              <Action OrderNumber="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="2960cb2f-9602-407a-8356-4949832ea116" TriggerForce="regexp,conditions" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="combogif" VariableExpression="https://raw.githubusercontent.com/dansa/FFXIV-Trigg/master/Resources/ComboGIF.gif" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetString" VariableName="combogifcolor" VariableExpression="https://raw.githubusercontent.com/dansa/FFXIV-Trigg/master/Resources/ComboGIFgreen.gif" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" AuraImageMode="Zoom" AuraName="bootcombo" AuraImage="${var:combogif}" AuraXIniExpression="884" AuraYIniExpression="218" AuraWIniExpression="48" AuraHIniExpression="48" AuraOIniExpression="100" AuraOTickExpression="((${var:Leaden Fist}=1)*${var:mOpo-Opo})*100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:Leaden Fist}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" AuraImageMode="Zoom" AuraName="dkcombo" AuraImage="${var:combogif}" AuraXIniExpression="884" AuraYIniExpression="272" AuraWIniExpression="48" AuraHIniExpression="48" AuraOIniExpression="100" AuraOTickExpression="((${var:Leaden Fist}&lt;1)*${var:mOpo-Opo})*100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False">
+                <Condition Enabled="false" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:Leaden Fist}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" AuraImageMode="Zoom" AuraName="tscombo" AuraImage="${var:combogifcolor}" AuraXIniExpression="933" AuraYIniExpression="272" AuraWIniExpression="48" AuraHIniExpression="48" AuraOIniExpression="100" AuraOTickExpression="(((${var:tstime}-${_systemtimems})&lt;9000)*${var:mRaptor})*100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" DebugLevel="Warning">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:tstime}" ExpressionTypeL="Numeric" ExpressionR="5000" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" AuraImageMode="Zoom" AuraName="democombo" AuraImage="${var:combogifcolor}" AuraXIniExpression="983" AuraYIniExpression="218" AuraWIniExpression="48" AuraHIniExpression="48" AuraOIniExpression="100" AuraOTickExpression="(((${var:demotick}-${_systemtimems})&lt;6000)*${var:mCoeurl})*100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" Asynchronous="False" DebugLevel="Warning">
+                <Condition Enabled="false" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:demotick}" ExpressionTypeL="Numeric" ExpressionR="5000" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" AuraName="SupaLoada" AuraImage="https://raw.githubusercontent.com/dansa/FFXIV-Trigg/master/Resources/MnkSplash.png" AuraXIniExpression="(${_screenwidth}/2)-200" AuraYIniExpression="(${_screenheight}/2)-75" AuraWIniExpression="300" AuraHIniExpression="150" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" DebugLevel="Warning">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" AuraOp="DeactivateAura" AuraName="SupaLoada" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="5000" DebugLevel="Warning">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="524290" Id="36446c58-1e39-4b0b-98eb-2e6774a1adc9" Name="Forms" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Sequential="True" Name="FormDrop" Id="a7dc0e57-5076-448a-9440-f76de8f789e7" RegularExpression="^\[[\d:\.]{12}\] 1E:[A-Z0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}) loses the effect of (?&lt;form&gt;[a-zA-Z-]{1,8}) Form" PrevActions="Interrupt">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="m${form}" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Not">
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:mPB}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:mOpo-Opo}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="FormGet" Id="6e0d3007-ff7f-4084-b830-9ede5f7a167c" RegularExpression="^\[[\d:\.]{12}\] 1A:[A-Z0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}) gains the effect of (?&lt;form&gt;[a-zA-Z-]{1,8}) Form">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="m${form}" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="FormShift" Id="411f57b9-948d-4ffb-8b74-7f31e382aea7" RegularExpression="^\[[\d:\.]{12}\] 1A:[A-Z0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}) gains the effect of Formless Fist">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="mOpo-Opo" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="Shift Drop" Id="297494b5-1bcd-4ad0-8986-3e991b1e3f5f" RegularExpression="^\[[\d:\.]{12}\] 1E:[A-Z0-9]{8}:(?&lt;name&gt;[a-zA-Z-' ]{1,31}) loses the effect of Formless Fist">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="mOpo-Opo" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Source="None" Name="WipeForms" Id="513e2a8c-0ae2-4817-81f6-a27b4a5000d2" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="mOpo-Opo" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="mCoeurl" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="mRaptor" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers />
+  </ExportedFolder>
+</TriggernometryExport>
